@@ -10,12 +10,14 @@ def edit_menu():
     """
 
     print("SELECTING FILE PATH...")
+    file_path = filedialog.askopenfilename()  # OPEN FILE SELECT DIALOG
     window = tkinter.Tk()
     window.withdraw()  # HIDE TKINTER MAIN WINDOW
-    file_path = filedialog.askopenfilename()  # OPEN FILE SELECT DIALOG
+
+
 
     while True:
-        print('''\033[42m
+        print('''
     ╔═╦═╦═╦══╦══╗        ╔══╦═╦═╗
     ║╬║╬║╦╣══╣══╣        ║═╦╣║║╬║
     ║╔╣╗╣╩╬══╠══║        ║╔╝║║║╗╣
@@ -43,4 +45,4 @@ def edit_menu():
         elif edit_choice == "6":
             break
         else:
-            print('\033[31m' + 'OPTION NOT FOUND' + '\033[0m')
+            print('\033[31m' + 'OPTION NOT FOUND' )
