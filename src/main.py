@@ -10,9 +10,8 @@ def edit():
 
 
 def menu():
-    # greeting
-    print('おはよ ございます',
-          f"GOOD MORNING, {username}",
+    # Greeting
+    print("\033[44m" + f"GOOD MORNING, {username}" + "\033[0m",
           "Let's start editing", sep='\n')
 
     while True:
@@ -24,7 +23,7 @@ def menu():
 
         1                                               Edit a photo
         2                                               Generate a random image
-        3                                               EXIT ''')
+        3                                               EXIT''')
 
         choice = int(input("Enter your choice : "))
         if choice == 1:
