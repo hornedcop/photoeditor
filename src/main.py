@@ -35,7 +35,7 @@ def menu():
             break
 
         else:
-            print('\033]31m' + 'OPTION NOT FOUND' + '\033]0m')
+            print('\033[31m' + 'OPTION NOT FOUND' + '\033[0m')
 
 
 menu()
