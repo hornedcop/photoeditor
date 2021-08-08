@@ -2,13 +2,9 @@ import tkinter
 from tkinter import filedialog
 
 
-def select_file():
-    window = tkinter.Tk()
-    window.withdraw()
-
-    file_path = filedialog.askopenfilename()
-
-    return file_path
+window = tkinter.Tk()
+window.withdraw()
+file_path = filedialog.askopenfilename()
 
 
 def edit_menu():
@@ -28,7 +24,6 @@ def edit_menu():
 
         edit_choice = input("ENTER CHOICE: ")
         print("CHOOSE FILE PATH: ")
-        file_path = select_file()
 
         if edit_choice == "1":
             adjust_birghtness(file_path)
