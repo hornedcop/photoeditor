@@ -1,12 +1,7 @@
+from edit_image.menu import edit_menu
+from random_image.menu import random_menu
+
 username = "admin"
-
-
-def random_img():
-    return
-
-
-def edit():
-    return
 
 
 def menu():
@@ -25,15 +20,14 @@ def menu():
         2                                               Generate a random image
         3                                               EXIT''')
 
-        choice = int(input("Enter your choice : "))
-        if choice == 1:
-            edit()
-        elif choice == 2:
-            random_img()
-        elif choice == 3:
+        choice = input("Enter your choice : ")
+        if choice == "1":
+            edit_menu()
+        elif choice == "2":
+            random_menu()
+        elif choice == "3":
             print('Sayōnara')
             break
-
         else:
             print('\033[31m' + 'OPTION NOT FOUND' + '\033[0m')
 
