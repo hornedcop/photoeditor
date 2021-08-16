@@ -100,7 +100,25 @@ def add_filters(file_path):
 
 
 def resize_img(file_path):
-    return
+    while True:
+        try:
+            factor = abs(float(input('Enter the Scaling factor : ')))
+            break
+        except ValueError:
+            print('\033[31m' + 'INVALID INPUT' + '\033[0m')
+
+    img = Image.open(file_path)
+    resized_img = img.resize((
+        round(img.size[0] * factor),
+        round(img.size[1] * factor)
+    ))
+
+    if input("do you want to see this image (y/n): ").lower() == "y":
+        resized_img.show()
+    if input("do you want to save this image (y/n): ").lower() == "y":
+        new_file = auto_renamed_writable_file(file_path)
+        resized_img.save(new_file)
+        new_file.close()
 
 
 def crop_img(file_path):
