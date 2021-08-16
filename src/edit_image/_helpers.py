@@ -18,5 +18,15 @@ def auto_renamed_writable_file(file_path, recursive_index=1):
             return open(new_file_path, "w")
 
 
-def get_file_extension(file_path):
-    return file_path.split["."][-1]
+def get_percentage_of(value, prompt):
+    while True:
+        try:
+            percentage = float(input(prompt))
+            if not (0 <= percentage <= 100):
+                raise ValueError
+            break
+        except ValueError:
+            print('\033[31m' + 'INVALID INPUT' + '\033[0m')
+
+    abs_value = round((percentage / 100) * value)
+    return abs_value

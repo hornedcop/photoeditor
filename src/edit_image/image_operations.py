@@ -122,4 +122,19 @@ def resize_img(file_path):
 
 
 def crop_img(file_path):
-    return
+    img = Image.open(file_path)
+    width, height = img.size
+
+    left = get_percentage_of(width, "Enter how much left area to crop (in percentage): ")
+    top = get_percentage_of(height, "Enter how much top area to crop (in percentage): ")
+    right = width - get_percentage_of(width, "Enter how much right area to crop (in percentage): ")
+    bottom = height - get_percentage_of(height, "Enter how much bottom area to crop (in percentage): ")
+
+    resized_img = img.crop((left, top, right, bottom))
+
+    if input("do you want to see this image (y/n): ").lower() == "y":
+        resized_img.show()
+    if input("do you want to save this image (y/n): ").lower() == "y":
+        new_file = auto_renamed_writable_file(file_path)
+        resized_img.save(new_file)
+        new_file.close()
