@@ -15,8 +15,6 @@ def edit_menu():
     file_path = filedialog.askopenfilename()  # OPEN FILE SELECT DIALOG
     print("SELECTED FILE PATH: ", file_path)
 
-
-
     while True:
         print('''
     ╔═╦═╦═╦══╦══╗        ╔══╦═╦═╗
@@ -46,4 +44,4 @@ def edit_menu():
         elif edit_choice == "6":
             break
         else:
-            print('\033[31m' + 'OPTION NOT FOUND' )
+            print('\033[31m' + 'OPTION NOT FOUND' + "\033[0m")
