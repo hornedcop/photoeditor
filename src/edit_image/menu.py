@@ -10,9 +10,10 @@ def edit_menu():
     """
 
     print("SELECTING FILE PATH...")
-    file_path = filedialog.askopenfilename()  # OPEN FILE SELECT DIALOG
     window = tkinter.Tk()
     window.withdraw()  # HIDE TKINTER MAIN WINDOW
+    file_path = filedialog.askopenfilename()  # OPEN FILE SELECT DIALOG
+    print("SELECTED FILE PATH: ", file_path)
 
 
 
