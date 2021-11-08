@@ -1,3 +1,7 @@
+import os
+import sys
+# sys.path.append(os.getcwd)
+print(os.getcwd())
 from edit_image.menu import edit_menu
 from random_image.menu import random_menu
 from datetime import datetime
