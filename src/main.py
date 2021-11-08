@@ -1,7 +1,11 @@
 import os
 import sys
-# sys.path.append(os.getcwd)
-print(os.getcwd())
+path = os.getcwd()
+if path.endswith("src"):
+    path = path[:-3]
+sys.path.append(path)
+
+# ACTUAL CODE BEGINS HERE
 from edit_image.menu import edit_menu
 from random_image.menu import random_menu
 from datetime import datetime
